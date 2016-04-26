@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 //below is an example of destructuring
 var {Route, Router, IndexRoute, hashHistory} =  require('react-router');
+var TodoApp = require('TodoApp');
 
 
 
@@ -14,7 +15,7 @@ require('style!css!sass!applicationStyles');
 
 
 ReactDOM.render(
-	<p>Boiler Plate</p>,
+	<TodoApp/>,
 	document.getElementById('app')
 );
 

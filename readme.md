@@ -1,1 +1,1 @@
-Boilerplate React App 2
+Todo app developed with REACT
