@@ -4,8 +4,10 @@ var uuid = require('node-uuid');
 var moment = require('moment');
 
 
-var TodoList = require('TodoList');
-var AddTodo = require('AddTodo');
+//var TodoList = require('TodoList');
+import TodoList from 'TodoList';
+//var AddTodo = require('AddTodo');
+import AddTodo from 'AddTodo';
 var TodoSearch = require('TodoSearch');
 var TodoAPI = require('TodoAPI');
 
@@ -36,6 +38,7 @@ var TodoApp = React.createClass({
 			]
 		});
 	},
+	/* //deprecated because of redux
 	handleToggle: function (id){
 		var updatedTodos = this.state.todos.map(function (todo) {
 			if(todo.id === id){
@@ -46,6 +49,7 @@ var TodoApp = React.createClass({
 		});
 		this.setState({todos: updatedTodos});
 	},
+	*/
 	handleSearch: function (showCompleted, searchText){
 		this.setState({
 			showCompleted: showCompleted,
@@ -67,7 +71,7 @@ var TodoApp = React.createClass({
 						<div className="container">
 
 							<TodoSearch onSearch={this.handleSearch}/>
-							<TodoList todos={filteredTodos} onToggle={this.handleToggle}/>
+							<TodoList/>
 							
 							<AddTodo onAddTodo={this.handleAddTodo}/>
 
@@ -94,7 +98,7 @@ module.exports = TodoApp;
 
 
 
-
+//<TodoList todos={filteredTodos} onToggle={this.handleToggle}/> deprecated because of redux
 
 
 
