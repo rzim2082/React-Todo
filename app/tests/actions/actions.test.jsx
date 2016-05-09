@@ -48,6 +48,23 @@ describe('actions', ()=>{
 
 	});
 
+	it('should generate add todos action object', () =>{
+		var todos = [{
+			id: 111,
+			text: 'anything',
+			completed: false,
+			compltedAt: undefined,
+			createdAt: 21323
+		}];
 
+		var action = {
+			type: 'ADD_TODOS',
+			todos
+		};
+
+		var res = actions.addTodos(todos);
+		expect(res).toEqual(action);
+
+	});
 
 });
