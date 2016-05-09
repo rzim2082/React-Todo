@@ -15,9 +15,7 @@ store.subscribe(() => {
 });
 
 
-store.dispatch(actions.addTodo('Clean the yard'));
-store.dispatch(actions.setSearchText('yard'));
-store.dispatch(actions.toggleShowCompleted());
+
 
 //Load foundation w loaders
 //require('style!css!foundation-sites/dist/foundation.min.css')
