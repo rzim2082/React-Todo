@@ -34,13 +34,19 @@ describe('reducers', () => {
 		it('should add new todo', () => {
 			var action = {
 				type: 'ADD_TODO',
-				text: 'test todo'
+				todo: {
+					id: 111,
+					text: 'anything',
+					completed: false,
+					completedAt: undefined,
+					createdAt: 21323
+				}
 			};
 
 			var res = reducers.todosReducer(df([]), df(action));
 
 			expect(res.length).toEqual(1); //looking at length to see if todo array was updated
-			expect(res[0].text).toEqual(action.text);
+			expect(res[0]).toEqual(action.todo);
 		});
 
 

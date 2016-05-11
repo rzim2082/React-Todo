@@ -1,4 +1,4 @@
-var uuid = require('node-uuid');
+//var uuid = require('node-uuid');
 var moment = require('moment');
 
 
@@ -35,11 +35,7 @@ export var todosReducer = (state = [], action) => {
 			return [
 				...state,
 				{
-					id: uuid(),
-					text: action.text,
-					completed: false,
-					createdAt: moment().unix(),
-					completedAt: undefined
+					...action.todo
 				}
 			];
 		case 'TOGGLE_TODO':

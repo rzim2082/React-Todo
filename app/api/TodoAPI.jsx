@@ -1,4 +1,8 @@
 var $ = require('jQuery');
+import Firebase from 'firebase';
+//var Firebase = require('firebase');
+var firebaseRef = new Firebase('https://zimmerman-todo-app.firebaseio.com/');
+
 
 
 module.exports = {
@@ -9,7 +13,7 @@ module.exports = {
 		}
 	},
 	getTodos: function(){
-		var stringTodos = localStorage.getItem('todos');
+		var stringTodos = firebaseRef;
 		var todos = [];
 
 		try {
